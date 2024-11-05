@@ -1,0 +1,148 @@
+/* Reset dan Gaya Body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141414;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #141414;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: 80px;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Judul Kategori */
+.category-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 20px 20px 10px;
+}
+
+/* Kontainer Kartu */
+.card-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 0 20px;
+}
+
+.card-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Kartu Konten */
+.card {
+    position: relative;
+    overflow: hidden;
+    width: 150px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Badge di Kartu */
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e50914;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+}
+
+/* Navigasi Footer */
+.footer-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #141414;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.nav-link {
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+    perspective: 1000px; /* Membuat efek 3D */
+}
+
+.nav-link.active {
+    color: #ffffff;
+}
+
+.nav-link:hover {
+    color: #e50914;
+    transform: translateZ(10px); /* Efek 3D saat hover */
+}
+
+/* Tambahan efek bayangan */
+.nav-link {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link:hover {
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Tombol */
+.button {
+    background-color: #e50914;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #f40612;
+}
